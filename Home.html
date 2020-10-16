@@ -1,0 +1,1522 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MyTuter Redesign</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	
+	<!-- CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animation.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	
+	
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+<style type="text/css">
+
+.marqueecontainer {
+    width: 15em;
+    height: 50em;
+    margin: 1em ;
+    overflow: hidden;
+    background: #ffffff;
+    position: relative;
+}
+
+/*============== Side BoX e-wall ================*/
+
+.marqueecontainer_index {
+    width: 15em;
+    height: 30em;
+    margin: 1em ;
+    overflow: hidden;
+    background: #ffffff;
+    position: relative;
+}
+
+.marqueeslider {
+    top: 1em;
+    position: relative;
+    box-sizing: border-box;
+    animation: slider 40s linear infinite;
+    list-style-type: none;
+    text-align: center;
+}
+
+.marqueeslider:hover {
+    animation-play-state: paused;
+}
+
+
+
+.marqueeblur .slider {
+  	margin: 0;
+    padding: 0 1em;
+    line-height: 1.5em;
+}
+
+.marqueeblur:before, .blur::before,
+.marqueeblur:after,  .blur::after {
+    left: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: 100%; 
+    height: 2em;
+    background-image: linear-gradient(180deg, #FFF, rgba(255,255,255,0));
+}
+
+.marqueeblur:after, .blur::after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.marqueeblur:before, .blur::before {
+    top: 10;
+}
+
+
+
+/* ==================================== */
+/*               SIDEBAR                */
+/* ==================================== */
+
+.sidebar-box{
+	margin-bottom:30px;
+	color:#7a8188;
+	margin-left: 20px;
+
+
+	
+}
+
+.sidebar-box .padding-box{
+	padding:15px;	
+}
+
+.sidebar-box-heading{
+	color:#fff;
+	text-transform:uppercase;
+	background:#34495e;
+	overflow:hidden;
+	height:50px;
+	padding:12px 20px 12px 40px;
+}
+
+.sidebar-box-heading .icons{
+	position:absolute;
+	left:30px;
+}
+
+.sidebar-box-heading h4{
+	margin:0;
+	display:inline-block;
+	padding-left:5px;
+}
+
+.sidebar-box-content{
+	border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.397);
+	background:#fff;
+}
+
+.sidebar-box-content.sidebar-padding-box{
+	padding:20px 15px;
+}
+
+.sidebar-box-content>*{
+	margin:30px;
+}
+
+.sidebar-box-content ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.sidebar-box-content>ul{
+	padding:20px 0;
+}
+
+.sidebar-box-content>ul>li{
+	position:relative;	
+}
+
+.sidebar-box-content>ul>li>a{
+	display:block;
+	padding:8px 35px 8px 20px;
+}
+
+.sidebar-box-content>ul>li>a .icons{
+	position:absolute;
+	right:15px;
+	top:10px;
+	font-size:14px;
+}
+
+.sidebar-box-content>ul>li>a:hover{
+	background:#f7f7f7;
+}
+
+.sidebar-box-content>ul>li:hover .sidebar-dropdown{
+	display:table;
+}
+
+.sidebar-dropdown{
+	position:absolute;
+	left:100%;
+	top:-10px;	
+	z-index:6000;
+	display:none;
+	background:#9b59b6;
+}
+
+.sidebar-box .chosen-single{
+	height:40px;
+	font-size:14px;
+	color:#7a8188;
+	padding: 8px 0 0 8px;
+	border:1px solid #e6e6e6;
+	margin-top:5px;
+}
+
+.sidebar-box .chosen-results{
+	border:1px solid #e6e6e6;
+	border-top:none;
+}
+
+.sidebar-box .chosen-results li{
+	padding:10px 6px;
+}
+
+.sidebar-box .chosen-single div {
+  top:8px;
+}
+
+.right-sidebar .sidebar-dropdown{
+	left:auto;
+	right:100%;	
+}
+
+.sidebar-dropdown>li{
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:top;
+}
+
+.sidebar-dropdown>li>ul{
+	float:left;
+	width:250px;
+	padding:10px 0;
+	display:table;
+}
+
+.sidebar-dropdown>li>ul>li>a{
+	padding:8px 20px;
+	display:block;	
+	color:#fff;
+}
+
+.sidebar-dropdown>li>ul>li>a:hover{
+	background:#8e44ad;	
+}
+
+.sidebar-dropdown>li:last-child{
+	margin:0;	
+}
+
+.sidebar-slider{
+	position:relative;
+	display:block;
+	overflow:hidden;
+}
+
+.sidebar-slider .flex-control-nav{
+	display:block;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	width:100%;
+}
+
+.sidebar-slider .flex-control-paging li a {
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	-ms-border-radius:0;
+	-o-border-radius:0;
+	width:9px;
+	height:9px;
+	background:#ccc;
+}
+
+.sidebar-slider .flex-control-paging li a:hover,  .sidebar-slider .flex-control-paging li a.flex-active{
+	background:#27ae60;
+}
+
+.sidebar-slider .slider-nav{
+	background:#f7f7f7;
+	display:block;
+	height:30px;
+}
+
+.bestsellers-table, .compare-table{
+	width:100%;
+	background:#fff;
+}
+
+.bestsellers-table tr, .compare-table tr{
+	padding-left:20px;
+	transition:background 0.3s;
+	-webkit-transition:background 0.3s;
+	-moz-transition:background 0.3s;
+	-ms-transition:background 0.3s;
+	-o-transition:background 0.3s;
+}
+
+.bestsellers-table tr:hover{
+	background:#f7f7f7;
+}
+
+.bestsellers-table .product-thumbnail, .compare-table .product-thumbnail{
+	width:45%;
+	padding:10px 10px 10px 15px;
+}
+
+.bestsellers-table .product-thumbnail img, .compare-table .product-thumbnail img{
+	width:100%;
+}
+
+.bestsellers-table .product-info, .compare-table .product-info{
+	background:transparent;
+	overflow:hidden;
+	padding:5px 20px 5px 5px;
+}
+
+.bestsellers-table .product-info p, .bestsellers-table .product-info span.price, .compare-table .product-info p{
+	font-size:14px;
+	margin:0 0 5px;
+}
+
+.sidebar .product{
+	margin-bottom:0;
+}
+
+a.remove{
+	font-size:12px;
+	color:#e74c3c;	
+}
+
+a.tag-item{
+	display:inline-block;
+	background:#f7f7f7;
+	margin-bottom:5px;
+	padding:5px 10px;
+	vertical-align:top;
+	font-size:14px;
+}
+
+a.tag-item:hover{
+	color:#fff;
+	background:#1abc9c;
+}
+
+.orange .carousel-heading{
+	background:#f5791f;
+}
+
+.orange .carousel-arrows i:hover{
+	background:#d35400;	
+}
+
+.noUi-base {
+	background:#f7f7f7;
+	border:none
+}
+
+.noUi-background{
+	box-shadow:none;
+}
+
+.noUiSlider{
+	margin-top:10px;	
+	border-radius:0;
+	height:12px;
+	margin-bottom:10px;
+	border:1px solid #e6e6e6;
+}
+
+.noUi-horizontal .noUi-handle {
+	width: 15px;
+	height: 22px;
+	left: -5px;
+	background:#a1aaaf;
+	border:none;
+	top: -6px;
+	box-shadow:none;
+	border-radius:0;
+	cursor:pointer;
+}
+
+.noUi-horizontal .noUi-handle:before, .noUi-horizontal .noUi-handle:after {
+	height:1px;
+	width:5px;
+	left:5px;
+	top:9px;
+	background:#ccc;
+}
+
+.noUi-connect{
+	background:#2ecc71;
+}
+
+.noUi-horizontal .noUi-handle:after{
+	top:11px;	
+}
+
+span.price-range-max{
+	float:right;
+	color:#1f2228;
+	font-size:14px;
+}
+
+span.price-range-min{
+	color:#1f2228;
+	font-size:14px;
+}
+
+label.color-checkbox.red{
+	background:#e74c3c;
+}
+
+label.color-checkbox.white{
+	background:#fff;
+}
+
+label.color-checkbox.black{
+	background:#000;
+}
+
+label.color-checkbox.blue{
+	background:#3498db;
+}
+
+label.color-checkbox.green{
+	background:#00a847;
+}
+
+label.color-checkbox{
+	width:30px;
+	height:30px;
+	border:2px solid #fff;
+	margin-right:10px!important;
+	outline:1px solid #eee;
+}
+
+label.color-checkbox:before{
+	display:none!important;
+	width:0!important;
+	height:0!important;
+}
+
+input[type="checkbox"]:checked + label.color-checkbox{
+	outline:1px solid #34495e;	
+}
+/* Colors */
+
+.purple .sidebar-box-heading, .purple a.tag-item:hover{
+	background:#9b59b6;
+}	
+
+.purple .sidebar-box-content>ul>li>a:hover{
+	color:#9b59b6;
+}
+
+.blue .sidebar-box-heading, .blue a.tag-item:hover{
+	background:#3498db;
+}	
+
+.blue .sidebar-box-content>ul>li>a:hover{
+	color:#3498db;
+}
+
+.red .sidebar-box-heading, .red a.tag-item:hover{
+	background:#e74c3c;
+}	
+
+.red .sidebar-box-content>ul>li>a:hover{
+	color:#e74c3c;
+}
+
+.green .sidebar-box-heading, .green a.tag-item:hover{
+	background:#1abc9c;
+}	
+
+.green .sidebar-box-content>ul>li>a:hover{
+	color:#1abc9c;
+}
+
+.orange .sidebar-box-heading, .orange a.tag-item:hover{
+	background:#f5791f;
+}	
+
+.orange .sidebar-box-content>ul>li>a:hover{
+	color:#f5791f;
+}
+
+.home-green .sidebar-box-heading, .orange a.tag-item:hover{
+	background:#1abc9c;
+}	
+
+.home-green .sidebar-box-content>ul>li>a:hover{
+	color:#1abc9c;
+}
+
+
+/* ========================= */
+/*        CAROUSELS          */
+/* ========================= */
+
+.carousel-heading{
+	color:#fff;
+	background: rgb(30,102,189);
+	background: -moz-linear-gradient(90deg, rgba(30,102,189,1) 0%, rgba(134,134,235,1) 100%, rgba(113,134,240,1) 100%, rgba(90,210,235,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(30,102,189,1) 0%, rgba(134,134,235,1) 100%, rgba(113,134,240,1) 100%, rgba(90,210,235,1) 100%);
+	background: linear-gradient(90deg, rgba(30,102,189,1) 0%, rgba(134,134,235,1) 100%, rgba(113,134,240,1) 100%, rgba(90,210,235,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1e66bd",endColorstr="#5ad2eb",GradientType=1);
+;
+	text-transform:uppercase;
+	margin-bottom:2px;
+	overflow:hidden;
+	height:50px;
+	position:relative;
+	margin: 20px;
+
+border-radius: 18px;
+
+box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.349);
+}
+
+.carousel-heading h4{
+	margin:0;
+	display:inline-block;
+	padding:12px 20px;
+}
+
+.carousel-arrows{
+	display:inline-block;
+	vertical-align:top;
+	cursor:pointer;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+.carousel-arrows .icons{
+	float:left;
+	height:100%;
+	width:50px;
+	height:50px;
+	border-left:1px solid #e7f9fc;
+	text-align:center;
+	margin:0;
+	padding:14px 0 0;
+	transition:background 0.3s;
+	-webkit-transition:background 0.3s;
+	-moz-transition:background 0.3s;
+	-ms-transition:background 0.3s;
+	-o-transition:background 0.3s;
+}
+
+.carousel-arrows a{
+	color:#fff;
+}
+
+.carousel-arrows .icons:hover{
+	background-color:#2c3e50;
+}
+
+.iosSlider .prevButton {
+	position: absolute;
+	top: 175px;
+	left: 10px;
+	width: 50px;
+	height: 50px;
+	background: url(assets/arrow_left.png) no-repeat left bottom;
+	z-index: 2;
+	opacity:0;
+	-webkit-opacity:0;
+	-moz-opacity:0;
+	-ms-opacity:0;
+	-o-opacity:0;
+	transition:opacity 0.3s;
+	-webkit-transition:opacity 0.3s;
+	-moz-transition:opacity 0.3s;
+	-ms-transition:opacity 0.3s;
+	-o-transition:opacity 0.3s;
+}
+
+.iosSlider .nextButton {
+	position: absolute;
+	top: 175px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	background: url(assets/large_right.png) no-repeat left bottom;
+	z-index: 2;
+	opacity:0;
+	-webkit-opacity:0;
+	-moz-opacity:0;
+	-ms-opacity:0;
+	-o-opacity:0;
+	transition:opacity 0.3s;
+	-webkit-transition:opacity 0.3s;
+	-moz-transition:opacity 0.3s;
+	-ms-transition:opacity 0.3s;
+	-o-transition:opacity 0.3s;
+}
+
+.boxedcontainer		{	max-width: 1170px; margin:auto; padding:0px 30px;}
+.tp-banner-container{
+	width:99%;
+	position:relative;
+	padding:8px;
+	margin-bottom:30px;
+	border-radius: 10px;
+  	background: white;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+
+	
+}
+
+.tp-banner-container:hover .tp-leftarrow.default, .tp-banner-container:hover .tp-rightarrow.default{
+	opacity:0.6;
+	-webkit-opacity:0.6;
+	-moz-opacity:0.6;
+	-ms-opacity:0.6;
+	-o-opacity:0.6;
+}
+
+.tp-banner-container:hover .tp-leftarrow.default:hover, .tp-banner-container:hover .tp-rightarrow.default:hover{
+	opacity:1;
+	-webkit-opacity:1;
+	-moz-opacity:1;
+}
+
+
+
+/* ========================Cards=================== */
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  
+
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+.card-image {
+  grid-area: image;
+  background: url("img1.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size:20px;
+}
+.card-text p {
+  color: grey;
+  font-size:15px;
+  font-weight: 300;
+}
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+}
+.card-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+.card-stats .stat {
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.card-stats .border {
+  border-left: 1px solid rgb(172, 26, 87);
+  border-right: 1px solid rgb(172, 26, 87);
+}
+.card-stats .value{
+  font-size:13px;
+  font-weight: 500;
+}
+.card-stats .value sup{
+  font-size:12px;
+}
+.card-stats .type{
+  font-size:11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+/*card2*/
+.card-image.card2 {
+  background: url("img2.jpg");
+  background-size: cover;
+}
+.card-text.card2 .date {
+  color: rgb(255, 77, 7);
+}
+.card-stats.card2 .border {
+  border-left: 1px solid rgb(185, 67, 20);
+  border-right: 1px solid rgb(185, 67, 20);
+}
+.card-stats.card2 {
+  background: rgb(255, 77, 7);
+}
+/*card3*/
+.card-image.card3 {
+  background: url("img3.jpg");
+  background-size: cover;
+}
+.card-text.card3 .date {
+  color: rgb(0, 189, 63);
+}
+.card-stats.card3 .border {
+  border-left: 1px solid rgb(14, 122, 50);
+  border-right: 1px solid rgb(14, 122, 50);
+}
+.card-stats.card3 {
+  background: rgb(0, 189, 63);
+}
+
+
+
+
+
+
+</style>
+
+
+
+
+
+	</head>
+	<body>
+	<div class="colorlib-loader"></div>
+	</div>
+
+														<!-- Header -->
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="upper-menu">
+				<div class="container">
+					<div class="col-md-2" style="position: relative; left: 10px; display: inline-block; margin-left: 5px; ">							
+						<div class="logo">
+							<a href="Home.html"><img src="images/logo.png" alt="" align="right"></a>							
+						</div>						
+					</div>
+
+
+					
+<!-- Header -->
+
+
+					<div class="row">
+						<div class="col-xs-6 col-md-push-2 text-left">
+							<p>
+								<ul class="colorlib-social-icons">
+									<li class="btn-cta"><a href="#search"><span>Search</span></a></li>
+
+									<li class="btn-cta"><a href="registernew.html"><span> Tutor / Institute Registration</span></a></li>
+									<li class="btn-cta"><a href="student_login.html"><span> MytutorOnline</span></a></li>
+									<li class="btn-cta"><a href="loginnew.html"><span>Login</span></a></li>
+
+								</ul>
+							</p>
+							<!-- <p class="btn-apply"><a href="#">Apply Now</a></p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<!-- <div class="col-md-2">
+							<div id="colorlib-logo"><a href="index.html">Eskwela</a></div>
+						</div> -->
+						<div class="col-md-10 text-right menu-1">
+							<ul>
+								<li><a href="Home.html">Home</a></li>
+
+								<li><a href="#">TUITION CLASSES</a></li>
+
+								<li class="has-dropdown">
+									<a href="#">ONLINE TUITION</a>
+									<ul class="dropdown">
+
+										<li><a href="onlineclasses - nisitha.html">Online Classes</a></li>
+
+										<li><a href="#">Online class request</a></li>
+
+										<li><a href="#">Online Class Schedule</a></li>
+
+										<li><a href="#">What is MytutorOnline?</a></li>
+									</ul>
+								</li>
+								
+								<li><a href="Institutes.html">INSTITUTES</a></li>
+
+								<li><a href="#">COURSES</a></li>
+							
+
+								<li class="has-dropdown">
+									<a href="#">MYTUTOR JOBS</a>
+									<ul class="dropdown">
+
+										<li><a href="govjobvacancy -nisitha.html"> Government Job Vacancies</a></li>
+
+										<li><a href="privetjobvacancy - nisitha.html"> Private Job Vacancies</a></li>
+
+									</ul>
+								</li>
+
+
+								<li><a href="#">EDU NEWS</a></li>
+
+								<!-- <li class="btn-cta"><a href="#"><span>Login</span></a></li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+
+												<!-- Slider -->
+
+
+		<aside id="colorlib-hero">
+			<div class="flexslider">
+				<ul class="slides">
+			   	<li style="background-image: url(images/01.jpg);">
+			   		<div class="overlay"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<h1>Best Online Learning System</h1>
+				   					<p><a href="student_register.html" class="btn btn-primary btn-lg btn-learn">Register Now</a></p>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>
+			   	<li style="background-image: url(images/02.jpg);">
+			   		<div class="overlay"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<h1>Advertise your class</h1>
+				   					<p><a href="Banneradvertisements.html" class="btn btn-primary btn-lg btn-learn">Advertise</a></p>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>
+			   	<li style="background-image: url(images/03.jpg);">
+			   		<div class="overlay"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<h1>Say no to posters</h1>
+				   					<p><a href="Banneradvertisements.html" class="btn btn-primary btn-lg btn-learn">Advertise</a></p>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>
+			   	<li style="background-image: url(images/04.jpg);">
+			   		<div class="overlay"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<h1>Apply to your next step</h1>
+				   					<p><a href="privetjobvacancy - nisitha.html" class="btn btn-primary btn-lg btn-learn">Apply</a></p>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+				   </li>	
+				   <li style="background-image: url(images/05.jpg);">
+					<div class="overlay"></div>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
+								<div class="slider-text-inner text-center">
+									<h1>Apply to Online class</h1>
+									<p><a href="student_register.html" class="btn btn-primary btn-lg btn-learn">Apply</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>	
+			  	</ul>
+		  	</div>
+		</aside>
+
+
+
+
+
+<div class="row content">
+																<!-- Main Content -->
+		
+
+<section class="main-content col-lg-9 col-md-9 col-sm-9 col-lg-push-3 col-md-push-3 col-sm-push-3" >
+<br>
+
+
+
+	<!-- /Product Brands -->
+
+
+
+
+<section class="slider">
+<div class="tp-banner-container">
+<style>
+.size_img {
+	width: 870px;
+	height: 225px;
+}
+
+.carousel-item {
+	text-align: center;
+	min-height: 280px;
+	/* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+</style>
+
+<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+	<li data-target="#myCarousel" data-slide-to="0" class="active "></li>
+	<li data-target="#myCarousel" data-slide-to="1" class=" "></li>
+</ol>
+
+<!-- Wrapper for slides -->
+<div class="carousel-inner" align="center">
+	<div class="item active" >
+<a target="_blank" href="more_details_tutord5a3.html?tid=mpae"> <img
+		src="images/banner_advertising/15980007462106.jpg" class="size_img"
+		alt=""></a>
+</div>
+	<div class="item ">
+<a target="_blank" href="more_details_tutor7618.html?tid=l5mimQ=="> <img
+		src="images/banner_advertising/15989386502130.jpg" class="size_img"
+		alt=""></a>
+</div>
+	<div class="item ">
+<a target="_blank" href="more_details_tutor9763.html?tid=mZuelg=="> <img
+		src="images/banner_advertising/15989896532128.jpg" class="size_img"
+		alt=""></a>
+</div>
+	<div class="item ">
+<a target="_blank" href="more_details_tutor1e13.html?tid=mJijlQ%3D%3D"> <img
+		src="images/banner_advertising/15984170822124.jpg" class="size_img"
+		alt=""></a>
+</div>
+</div>
+
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+</section>
+
+
+
+
+
+<!-- Featured Products -->
+<div class="products-row row">
+
+<!-- Carousel Heading -->
+<div class="col-lg-12 col-md-12 col-sm-12">
+
+<div class="carousel-heading">
+<h4>Top Adds</h4>
+</div>
+
+<!-- ========================Cards============================= -->
+
+
+
+<div class="card-deck" style="display: flex;">
+    <div class="card">
+		<div class="card-image"><img src="images/ad_images/1596972883tled-1-recovered.jpg" width="300" height="200"></div>
+		<div class="card-text">
+		  <span class="date">Mr. Charith Madusanka</span>
+		  <h2><br></h2>
+		  <p>MATHEMATICS for 6,7,8,9,10,11</p>
+		</div>
+		<div class="card-stats">
+		  <div class="stat">
+			<div class="value">Home visit</div>
+			<div class="type">LOCATION</div>
+		  </div>
+		  <div class="stat border">
+			<div class="value">5123</div>
+			<div class="type">views</div>
+		  </div>
+		  <div class="stat">
+			<div class="value">32</div>
+			<div class="type">comments</div>
+		  </div>
+		</div>
+	  </div>
+
+
+	  <div class="card">
+		<div class="card-image card2"><img src="images/ad_images/1600863731my-tutor-imge.jpg" width="300" height="200"></div>
+		<div class="card-text card2">
+		  <span class="date">Mr. Shehan Dias</span>
+		  <h2><br></h2>
+		  <p> Accounting (A/L & O/L  Local & International) <br>  Chartered Management Accountant (CIMA),CGMA</p>
+		</div>
+		<div class="card-stats card2">
+		  <div class="stat">
+			<div class="value">Home or class</div>
+			<div class="type">LOCATION</div>
+		  </div>
+		  <div class="stat border">
+			<div class="value">7152</div>
+			<div class="type">views</div>
+		  </div>
+		  <div class="stat">
+			<div class="value">21</div>
+			<div class="type">comments</div>
+		  </div>
+		</div>
+	  </div>
+
+	  
+	  <div class="card">
+		  <div class="card-image card3"><img src="images/ad_images/1600408897frnt-img.jpg" width="300" height="200"></div>
+		  <div class="card-text card3">
+			<span class="date">Ms. Piumi Perera</span>
+			<h2><br></h2>
+			<p>IELTS INDIVIDUAL  CLASSES RESULTS ASSURED</p>
+		  </div>
+		  <div class="card-stats card3">
+			<div class="stat">
+			  <div class="value">Home visit or in class</div>
+			  <div class="type">LOCATION</div>
+			</div>
+			<div class="stat border">
+			  <div class="value">3021</div>
+			  <div class="type">views</div>
+			</div>
+			<div class="stat">
+			  <div class="value">15</div>
+			  <div class="type">comments</div>
+			</div>
+		  </div>
+		</div>
+  </div>
+
+</div>
+<!-- /Carousel Heading -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<!-- /Main Content -->
+
+
+
+
+
+
+
+											<!-- E wall Side-bar -->
+
+
+
+
+<aside class="sidebar col-lg-3 col-md-3 col-sm-3  col-lg-pull-9 col-md-pull-9 col-sm-pull-9">
+<style>
+    #half-banner-top{
+        margin-bottom: 0px;
+    }
+</style>
+    <div class="row sidebar-box">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+							<!--<div id="half-banner-top">
+                                <a href="http://bit.ly/sinhala_general_quize" target="_blank"><img src="images/banner_advertising/1599624905er-my-tutor-copy.jpg" /></a>
+                            </div> -->
+         </div>
+    </div>
+
+                    <style>
+    @keyframes slider {
+        0%   { transform: translateY(-10vh) }
+        100% { transform: translateY(-110%) }
+    }
+</style>
+
+
+<div class="row sidebar-box">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="sidebar-box-content"><a href="Adverts.html"><center> <img src="images/ewall_banner.png" width="250" height="150"></center></a>
+            <div class="marqueecontainer_index marqueeblur">
+                <ul class="marqueeslider">
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutor643a.html?tid=mJWklQ==" target="_blank" ><img src="images/featured_ads/16000852332105.jpg" alt="UID7319" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="https://bit.ly/3iYfIte" target="_blank" ><img src="images/featured_ads/1594634928advertise.jpg" alt="Ad here" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutord5a3.html?tid=mpae" target="_blank" ><img src="images/featured_ads/15979974492106.jpg" alt="UID554" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutorfd82.html?tid=mZekmg==" target="_blank" ><img src="images/featured_ads/15985099692126.jpg" alt="UID9842" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutorbb81.html?tid=mJijlQ==" target="_blank" ><img src="images/featured_ads/15930778322071.jpg" alt="UID8119" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutor3780.html?tid=l5uklw==" target="_blank" ><img src="images/featured_ads/16008449962142.jpg" alt="UID6365" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutor9763.html?tid=mZuelg==" target="_blank" ><img src="images/featured_ads/15989893762128.jpg" alt="UID10594" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutor7c47.html?tid=mZijmw==" target="_blank" ><img src="images/featured_ads/15999766402135.jpg" alt="UID10023" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutor454c.html?tid=mZmgnA==" target="_blank" ><img src="images/featured_ads/16008783952140.jpg" alt="UID10158" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutor201b.html?tid=mZmjlA==" target="_blank" ><img src="images/featured_ads/15983472422123.jpg" alt="UID10199" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutor69b8.html?tid=mJqemQ==" target="_blank" ><img src="images/featured_ads/16004035432115.jpg" alt="UID8317" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutor6c55.html?tid=l5ygmA==" target="_blank" ><img src="images/featured_ads/16004041562132.jpg" alt="UID6511" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutor7618.html?tid=l5mimQ==" target="_blank" ><img src="images/featured_ads/15989385812130.jpg" alt="UID5806" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutor564f.html?tid=mZugmA==" target="_blank" ><img src="images/featured_ads/15998465492134.jpg" alt="UID10659" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutord33e.html?tid=mZellQ==" target="_blank" ><img src="images/featured_ads/16007479852136.jpg" alt="UID9849" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                     
+                        <li>
+                            
+                <div class="product">
+                    <a href="more_details_tutorcc13.html?tid=mJWflA==" target="_blank" ><img src="images/featured_ads/15995588352133.jpg" alt="UID7170" width="90%" class="img-thumbnail"  ></a>
+
+                </div><br>
+                                    </li>
+                                    </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+                    
+ <style>
+    #half-banner-bottom{
+        margin-bottom: 10px;
+    }
+</style>
+    <div class="row sidebar-box blue">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+		</div>
+	</div> 
+
+</aside>
+
+
+
+
+
+</div>
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SEarch -->
+
+
+
+	
+		<div id="colorlib-subscribe" class="subs-img" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5" >
+			<div class="overlay"id="search"></div>
+			<div class="container">
+
+				<div class="" >
+					<div class="col-md-6 col-md-offset-3">
+						<div class="row">
+							<div class="col-md-12">
+							<form1 class="form-inline qbstp-header-subscribe" >
+								<div class="col-three-forth">
+									<div class="form-group">
+										<input type="text" class="form-control" id="email" placeholder="Search Here">
+									</div>
+								</div>
+								<div class="col-one-third">
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary">Search</button>
+									</div>
+								</div>
+							</form1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTERRRRR -->
+		
+		<footer id="colorlib-footer">
+			<div class="container">
+				<div class="row row-pb-md">
+
+
+
+
+
+
+					
+					<div class="col-md-3 colorlib-widget">
+						<h4>SERVICES</h4>
+						<p>
+							<ul class="colorlib-footer-links">
+								<li><a href="#"><i class="icon-check"></i> Tuition Classes</a></li>
+								<li><a href="Institutes.html"><i class="icon-check"></i> Institutes</a></li>
+								<li><a href="#"><i class="icon-check"></i> Job Vacancies</a></li>
+								<li><a href="#"><i class="icon-check"></i> Government Gazette</a></li>
+								<li><a href="Under construction.html"><i class="icon-check"></i> Government Courses</a></li>
+								<li><a href="Under construction.html"><i class="icon-check"></i> Edu News</a></li>
+							</ul>
+						</p>
+					</div>
+
+
+					<div class="col-md-3 colorlib-widget">
+						<h4>INFORMATION</h4>
+						<p>
+							<ul class="colorlib-footer-links">
+								<li><a href="Banneradvertisements.html"><i class="icon-check"></i> Banner Advertising</a></li>
+								<li><a href="#"><i class="icon-check"></i> Tuition Class Advertising</a></li>
+								<li><a href="#"><i class="icon-check"></i> Terms & Conditions</a></li>
+								<li><a href="#"><i class="icon-check"></i> Privacy Policy</a></li>
+								<li><a href="AboutUS.html"><i class="icon-check"></i> About Us</a></li>
+								<li><a href="ContactUs.html"><i class="icon-check"></i> Contact Us</a></li>
+								<li><a href="Careers.html"><i class="icon-check"></i> Careers</a></li>
+							</ul>
+						</p>
+					</div>
+
+
+
+					<div class="col-md-3 colorlib-widget">
+						<h4>HoT Keys</h4>
+						<p>
+							
+							<ul class="colorlib-footer-links">
+								<li><button class="btn btn1"><a href="AboutUS.html"></i> About Us</a></button></li>
+								<li><button class="btn btn1"><a href="Careers.html"></i> Careers</a></button></li>
+								<li><button class="btn btn1"><a href="ContactUs.html"></i> Contact</a></button></li>
+
+							</ul>
+						</p>
+					</div>
+
+
+
+
+
+
+					<div class="col-md-3 colorlib-widget">
+
+					</div>
+
+					<div class="col-md-3 colorlib-widget">
+						<h4>Contact Info</h4>
+						<ul class="colorlib-footer-links">
+							<li>No. 386 B/2, Kandy Road,<br>Kurunegala, Sri Lanka</li>
+							<li><a href="tel://1234567920"><i class="icon-phone"></i> +94 374 550 530+94 777 77 4785</a></li>
+							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@mytutor.lk</a></li>
+							<li><a href="https://www.mytutor.lk/"><i class="icon-location4"></i> https://www.mytutor.lk/</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copy">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p>
+								<small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> 2011 - 2020 All Rights Reserved - mytutor.lk <i class="icon-heart" aria-hidden="true"></i> by <a href="https://www.mytutor.lk/" target="_blank">WEEKDAY GROUP 4</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</small><br> 
+								
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,1191 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Institute</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style1.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+	rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link
+	rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+<style>
+
+
+
+/* -----------------zoom hover Animation ----------------------------------*/
+.zoom {
+ transition: transform .2s; /* Animation */
+ margin:auto;
+ 
+}
+
+.zoom:hover {
+  transform: scale(1.5); 
+  
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/*-------------------------DROPDOWN-----------------------------------------------------------------*/
+
+
+.contain {
+  margin-top: 100px;
+  padding: 32px;
+}
+
+.select-box {
+  position: relative;
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box .options-contain {
+  background: #2f3640;
+  opacity: 0.6;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+
+  position: absolute;
+  z-index: 100;
+}
+
+.selected {
+  background: #2f3640;
+  opacity: 0.8;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url("images/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-contain.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+  margin-top: 104px;
+}
+
+.select-box .options-contain.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-contain::-webkit-scrollbar {
+  width: 8px;
+  background: #0d141f;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-contain::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: #414b57;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+/* Searchbox */
+
+.search-box1 input {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  position: absolute;
+  border-radius: 8px 8px 0 0;
+  z-index: 100;
+  border: 8px solid #2f3640;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.search-box1 input:focus {
+  outline: none;
+}
+
+.select-box .options-contain.active ~ .search-box1 input {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+
+/*-------------------------Search start-----------------------------------------------------------------*/
+.search_box{
+  width: 50%;
+  position: relative;
+  opacity: 1;
+}
+
+.search_box input[type="text"]{
+  width: 100%;
+  padding: 20px;
+  padding-right: 60px;
+  box-sizing: border-box;
+  background: black;
+  opacity: 0.6;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+  outline: none;
+}
+
+.fa-search{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  color: #fff;
+  font-size: 25px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff;
+}
+
+@media screen and (max-width: 425px){
+  .search_box{
+    width: 95%;
+  }
+}
+/*------------------------------------------------------------------------------------------*/
+
+/*-------------------------cards-----------------------------------*/
+
+.cards12 {
+    margin: 0 auto;
+    max-width: 1500px;
+    display: grid;
+	
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    grid-auto-rows: auto;
+    gap: 80px;
+    font-family: sans-serif;
+    padding-top: 80px;
+	padding-bottom: 130px;
+	
+}
+
+
+
+.hh{
+
+	color: #555555;
+	font: outline;
+	font-weight: 100;
+	width: 90%;
+padding: 10px;
+font-size: 20px;
+font-family: Arial;
+font-size: 500px;
+}
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------*/
+.cards1 * {
+    box-sizing: border-box;
+	
+	
+}
+
+.card1__image {
+    width: 130%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    border-top: 2px solid #333333;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
+	
+}
+
+
+.card1__content {
+	width: 130%;
+    line-height: 1.5;
+    font-size: 0.9em;
+    padding: 15px;
+    background: #fafafa;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
+}
+
+.card1__content > p:first-of-type {
+    margin-top: 0;
+}
+
+.card1__content > p:last-of-type {
+    margin-bottom: 0;
+}
+
+.card1__info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555555;
+    background: #eeeeee;
+    font-size: 0.8em;
+    border-bottom: 2px solid #333333;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
+	width: 130%;
+}
+
+.card1__info i {
+    font-size: 0.9em;
+    margin-right: 8px;
+}
+
+.card1__link {
+    color: #64968c;
+    text-decoration: none;
+}
+
+.card1__link:hover {
+    text-decoration: underline;
+}
+
+
+/*----------------------pagination-----------------*/
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #6495ED;
+  color: white;
+  border: 1px  black;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+/*----------------------pagination-----------------*/
+
+
+
+</style>
+
+
+
+
+
+
+
+	</head>
+	<body>
+		
+	<div class="colorlib-loader"></div>
+
+	</div>
+											<!-- Logo -->
+	
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="upper-menu">
+				<div class="container">
+					<div class="col-md-2"style="position: relative; left: 10px; display: inline-block; margin-left: 5px; ">
+						<div class="logo">
+							<a href="Home.html"><img src="images/logo.png" alt="" align="right"></a>
+						</div>
+					</div>
+
+
+					
+											<!-- Header -->
+
+
+					<div class="row">
+						<div class="col-xs-6 col-md-push-2 text-left">
+							<p>
+								<ul class="colorlib-social-icons">
+
+
+									
+									
+
+									<li class="btn-cta"><a href="#search"><span>Search</span></a></li>
+
+									<li class="btn-cta"><a href="registernew.html"><span> Tutor/Institute Registration</span></a></li>
+									<li class="btn-cta"><a href="student_login.html"><span> MytutorOnline</span></a></li>
+									<li class="btn-cta"><a href="loginnew.html"><span>Login</span></a></li>
+
+								</ul>
+							</p>
+							<!-- <p class="btn-apply"><a href="#">Apply Now</a></p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<!-- <div class="col-md-2">
+							<div id="colorlib-logo"><a href="index.html">Eskwela</a></div>
+						</div> -->
+
+
+
+						<div class="col-md-10 text-right menu-1">
+							<ul>
+								<li><a href="Home.html">Home</a></li>
+
+								<li><a href="#">TUITION CLASSES</a></li>
+
+								<li class="has-dropdown">
+									<a href="#">ONLINE TUITION</a>
+									<ul class="dropdown">
+
+										<li><a href="onlineclasses - nisitha.html">Online Classes</a></li>
+
+										<li><a href="#">Online class request</a></li>
+
+										<li><a href="#">Online Class Schedule</a></li>
+
+										<li><a href="#">What is MytutorOnline?</a></li>
+									</ul>
+								</li>
+								
+								<li><a href="Institutes.html">INSTITUTES</a></li>
+
+								<li><a href="#">COURSES</a></li>
+							
+
+								<li class="has-dropdown">
+									<a href="#">MYTUTOR JOBS</a>
+									<ul class="dropdown">
+
+										<li><a href="govjobvacancy -nisitha.html"> Government Job Vacancies</a></li>
+
+										<li><a href="privetjobvacancy - nisitha.html"> Private Job Vacancies</a></li>
+
+									</ul>
+								</li>
+
+
+								<li><a href="#">EDU NEWS</a></li>
+
+								<!-- <li class="btn-cta"><a href="#"><span>Login</span></a></li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="cent"style="background-color: #8EC5FC;
+		background-image: linear-gradient(90deg, #8EC5FC 0%, #E0C3FC 100%);
+		">
+		<br>
+		<br>
+
+
+
+<!-- INstitutes --------------------------------------------------------------------------------------------------------------------->
+<center><h1 style="font-size:4vw;color:white;"><b>Institutes</b></h1></center>
+
+<div class="container">
+	<div class="row">
+	  <div class="col-sm-6">
+		<div class="select-box" style="float:right">
+			<div class="options-contain">
+			  <div class="option">
+				<input
+				  type="radio"
+				  class="radio"
+				  id="automobiles"
+				  name="category"
+				/>
+				<label for="Select District">Automobiles</label>
+			  </div>
+	  
+			  <div class="option">
+				<input type="radio" class="radio" id="film" name="category" />
+				<label for="film">Kandy</label>
+			  </div>
+	  
+			  <div class="option">
+				<input type="radio" class="radio" id="science" name="category" />
+				<label for="science">Colomboy</label>
+			  </div>
+	  
+			  <div class="option">
+				<input type="radio" class="radio" id="art" name="category" />
+				<label for="art">Galle</label>
+			  </div>
+	  
+			  <div class="option">
+				<input type="radio" class="radio" id="music" name="category" />
+				<label for="music">Ampara</label>
+			  </div>
+	  
+			  <div class="option">
+				<input type="radio" class="radio" id="travel" name="category" />
+				<label for="travel">Anuradhapura</label>
+			  </div>
+	  
+			  <div class="option">
+				<input type="radio" class="radio" id="sports" name="category" />
+				<label for="sports">Badulla</label>
+			  </div>
+	  
+			  <div class="option">
+				<input type="radio" class="radio" id="news" name="category" />
+				<label for="news">Kaluthara</label>
+			  </div>
+	  
+			  <div class="option">
+				<input type="radio" class="radio" id="tutorials" name="category" />
+				<label for="tutorials">Mannar</label>
+			  </div>
+			</div>
+	  
+			<div class="selected">
+			  Select District
+			</div>
+	  
+			<div class="search-box1" style="margin-top:0px;">
+			  <input type="text" placeholder="">
+			</div>
+	  </div>
+	</div>
+		<div class="col-sm-6">
+			<div class="select-box">
+				<div class="options-contain">
+				<div class="option">
+					<input
+					type="radio"
+					class="radio"
+					id="automobiles"
+					name="category"
+					/>
+					<label for="Select City">Select City</label>
+				</div>
+		
+				<div class="option">
+					<input type="radio" class="radio" id="film" name="category" />
+					<label for="film">Dehiwatte</label>
+				</div>
+		
+				<div class="option">
+					<input type="radio" class="radio" id="science" name="category" />
+					<label for="science">Peradeniya</label>
+				</div>
+		
+				<div class="option">
+					<input type="radio" class="radio" id="art" name="category" />
+					<label for="art">Katugasthota</label>
+				</div>
+		
+				<div class="option">
+					<input type="radio" class="radio" id="music" name="category" />
+					<label for="music">Galagedara</label>
+				</div>
+		
+				<div class="option">
+					<input type="radio" class="radio" id="travel" name="category" />
+					<label for="travel">Agbopura</label>
+				</div>
+		
+				<div class="option">
+					<input type="radio" class="radio" id="sports" name="category" />
+					<label for="sports">Bokkawala</label>
+				</div>
+		
+				<div class="option">
+					<input type="radio" class="radio" id="news" name="category" />
+					<label for="news">Matale</label>
+				</div>
+		
+				<div class="option">
+					<input type="radio" class="radio" id="tutorials" name="category" />
+					<label for="tutorials">Mawilamda</label>
+				</div>
+				</div>
+		
+				<div class="selected">
+				Select City
+				</div>
+		
+				<div class="search-box1">
+				<input type="text" placeholder="Enter City" style="margin-bottom:100px" />
+				</div>
+			</div>
+		
+			
+		</div>
+	</div>
+	<br/>
+	<br/>
+	<br/>
+
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="search_box" style="display: block;margin: auto;">
+				<input type="text" placeholder="Search Institutes">
+				<i class="fas fa-search"></i>
+		
+				
+				<div  style="float:right;margin-right:10px; margin-top:-90px;">
+					<button type="button" style="background-color:#6495ED; border-radius: 12px;">Search</button>
+				</div>
+				<div style="float:right;margin-top:-90px; margin-right:10px">
+					<button type="button"style="background-color:#6495ED; height: 50px;border-radius: 12px;">Reset</button>
+				</div>
+		</div>
+		 </div>
+	</div>
+  </div>
+
+
+  
+<div class="cards12" style="margin-right:5%; margin-left: 5%;">
+	<div class="zoom">
+	<div class="card1">
+	  <img class="card1__image" src="images/Institutes/ins7.jpg" alt="">
+	  <div class="card1__content">
+		<p>
+			
+		  <b>EASL J LANKA </b>
+		</p>
+		
+			
+			<p> Since :  1975</p>
+			<p>Reg Name : Ganasara Institute</p>
+			<p>Tel : 767911556 , 0112682628  </p>
+			<p>Mail : janakakodikara9@gmail.com</p>  
+
+		
+	  </div>
+	  <div class="card1__info">
+		<div>
+		  <i class="material-icons">place</i>Colombo 08
+		</div>
+		<div>
+		  <a href="./" class="card1__link">View more</a>
+		</div>
+	  </div>
+	</div>
+	</div>
+
+
+	<div class="zoom">
+		<div class="card1">
+		  <img class="card1__image" src="images/Institutes/ins6.jpg" alt="">
+		  <div class="card1__content">
+			<p>
+			
+				<b>A+ Tutors Lanka </b>
+			  </p>
+			  
+				  
+				  <p> Since : 2020</p>
+				  <p>Reg Name : A+ Tutors Lanka</p>
+				  <p>Tel : 0760590259      </p>
+				  <p>Mail : aplustutorslanka@gmail.com</p>
+			
+		  </div>
+		  <div class="card1__info">
+			<div>
+			  <i class="material-icons">place</i>Akarawita
+			</div>
+			<div>
+			  <a href="./" class="card1__link">View more</a>
+			</div>
+		  </div>
+		</div>
+		</div>
+		<div class="zoom">
+			<div class="card1">
+			  <img class="card1__image" src="images/Institutes/institute.jpg" alt="">
+			  <div class="card1__content">
+				<p>
+			
+					<b>JMC MANAGEMENT </b>
+				  </p>
+				  
+					  
+					  <p> Since :  1972</p>
+					  <p>Reg Name : JMC Managment </p>
+					  <p>Tel : 710808493 , 0112571001    </p>
+					  <p>Mail : kmnvino@gmail.com</p>
+				
+		
+				
+			  </div>
+			  <div class="card1__info">
+				<div>
+				  <i class="material-icons">place</i>Akuregoda
+				</div>
+				<div>
+				  <a href="./" class="card1__link">View more</a>
+				</div>
+			  </div>
+			</div>
+			</div>
+			<div class="zoom">
+				<div class="card1">
+				  <img class="card1__image" src="images/Institutes/ins5.gif" alt="">
+				  <div class="card1__content">
+					<p>
+			
+						<b>MEETI - Sri Lanka </b>
+					  </p>
+					  
+						  
+						  <p> Since :  1984</p>
+						  <p>Reg Name : MEETI - Sri Lanka</p>
+						  <p>Tel : 716209944     </p>
+						  <p>Mail :  admin@meeti.lk</p>
+					
+					
+				  </div>
+				  <div class="card1__info">
+					<div>
+					  <i class="material-icons">place</i>Colombo 7
+					</div>
+					<div>
+					  <a href="./" class="card1__link">View more</a>
+					</div>
+				  </div>
+				</div>
+				</div>
+				<div class="zoom">
+					<div class="card1">
+					  <img class="card1__image" src="images/Institutes/ins3.png" alt="">
+					  <div class="card1__content">
+						<p>
+			
+							<b>teachyou.lk</b>
+						  </p>
+						  
+							  
+							  <p> Since :   2020</p>
+							  <p>Reg Name : teachyou.lk</p>
+							  <p>Tel :  71421609        </p>
+							  <p>Mail : teachyou.lk@gmail.com</p>
+						
+						
+					  </div>
+					  <div class="card1__info">
+						<div>
+						  <i class="material-icons">place</i>Akuressa
+						</div>
+						<div>
+						  <a href="./" class="card1__link">View more</a>
+						</div>
+					  </div>
+					</div>
+					</div>
+					<div class="zoom">
+						<div class="card1">
+						  <img class="card1__image" src="images/Institutes/ins2.jpg" alt="">
+						  <div class="card1__content">
+							<p>
+			
+								<b>Business School </b>
+							  </p>
+							  
+								  
+								  <p> Since :  2017</p>
+								  <p>Reg Name : Business School</p>
+								  <p>Tel : 0712803379 , 94712803379     </p>
+								  <p>Mail : lahirusmt@gmail.com</p>
+							
+							
+						  </div>
+						  <div class="card1__info">
+							<div>
+							  <i class="material-icons">place</i>Kandy
+							</div>
+							<div>
+							  <a href="./" class="card1__link">View more</a>
+							</div>
+						  </div>
+						</div>
+						</div>
+						<div class="zoom">
+							<div class="card1">
+							  <img class="card1__image" src="images/Institutes/institute.jpg" alt="">
+							  <div class="card1__content">
+								<p>
+			
+									<b>IABS
+										</b>
+									</p>
+								  
+									  
+									  <p> Since :  1998</p>
+									  <p>Reg Name : IABS</p>
+									  <p>Tel : 0761339875 , 0761019875    </p>
+									  <p>Mail : samantha.iabs@yahoo.com</p>
+								
+								
+							  </div>
+							  <div class="card1__info">
+								<div>
+								  <i class="material-icons">place</i>Colombo
+								</div>
+								<div>
+								  <a href="./" class="card1__link">View more</a>
+								</div>
+							  </div>
+							</div>
+							</div>
+							<div class="zoom">
+								<div class="card1">
+								  <img class="card1__image" src="images/Institutes/ins1.jpg" alt="">
+								  <div class="card1__content">
+									<p>
+			
+										<b> Institute of Music </b>
+									  </p>
+									  
+										  
+										  <p> Since :  1979</p>
+										  <p>Reg Name :Harsha Makalande</p>
+										  <p>Tel :  777380362 ,0112885316  7   </p>
+										  <p>Mail : harsha@gmail.com</p>
+									
+							
+									
+								  </div>
+								  <div class="card1__info">
+									<div>
+									  <i class="material-icons">place</i>Kotte
+									</div>
+									<div>
+									  <a href="./" class="card1__link">View more</a>
+									</div>
+								  </div>
+								</div>
+								</div>
+								<div class="zoom">
+									<div class="card1">
+									  <img class="card1__image" src="images/Institutes/institute.jpg" alt="">
+									  <div class="card1__content">
+										<p>
+			
+											<b>Cambridge School  </b>
+										  </p>
+										  
+											  
+											  <p> Since :  2011</p>
+											  <p>Reg Name : Cambridge School</p>
+											  <p>Tel : 0777147831     </p>
+											  <p>Mail : cseschooln@gmail.com</p>
+										
+								
+										
+									  </div>
+									  <div class="card1__info">
+										<div>
+										  <i class="material-icons">place</i>Negambo
+										</div>
+										<div>
+										  <a href="./" class="card1__link">View more</a>
+										</div>
+									  </div>
+									</div>
+									</div>
+									
+										<div class="zoom">
+											<div class="card1">
+											  <img class="card1__image" src="images/Institutes/ins8.png" alt="">
+											  <div class="card1__content">
+												<p>
+			
+													<b>Saminco Institute</b>
+												  </p>
+												  
+													  
+													  <p> Since :  2008</p>
+													  <p>Reg Name : Saminco Institute</p>
+													  <p>Tel : 0722667700 ,0722667700      </p>
+													  <p>Mail : saminco@hotmail.com</p>
+												
+												
+											  </div>
+											  <div class="card1__info">
+												<div>
+												  <i class="material-icons">place</i>Akuregoda
+												</div>
+												<div>
+												  <a href="./" class="card1__link">View more</a>
+												</div>
+											  </div>
+											</div>
+											</div>
+
+
+
+
+		</div>
+
+
+
+	
+<!-- /Banner form -->
+
+
+
+
+
+
+
+
+
+<center>
+
+<div class="pagination">
+	<a href="#">&laquo;</a>
+	<a href="#" class ="active">1</a>
+	<a href="#" >2</a>
+	<a href="#">3</a>
+	<a href="#">4</a>
+	<a href="#">5</a>
+	<a href="#">6</a>
+	<a href="#">&raquo;</a>
+  </div>
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTERRRRR -->
+		
+		<footer id="colorlib-footer">
+			<div class="container">
+				<div class="row row-pb-md">
+
+
+
+
+
+
+					
+					<div class="col-md-3 colorlib-widget">
+						<h4>SERVICES</h4>
+						<p>
+							<ul class="colorlib-footer-links">
+								<li><a href="#"><i class="icon-check"></i> Tuition Classes</a></li>
+								<li><a href="Institutes.html"><i class="icon-check"></i> Institutes</a></li>
+								<li><a href="#"><i class="icon-check"></i> Job Vacancies</a></li>
+								<li><a href="#"><i class="icon-check"></i> Government Gazette</a></li>
+								<li><a href="#"><i class="icon-check"></i> Government Courses</a></li>
+								<li><a href="#"><i class="icon-check"></i> Edu News</a></li>
+							</ul>
+						</p>
+					</div>
+
+
+					<div class="col-md-3 colorlib-widget">
+						<h4>INFORMATION</h4>
+						<p>
+							<ul class="colorlib-footer-links">
+								<li><a href="Banneradvertisements.html"><i class="icon-check"></i> Banner Advertising</a></li>
+								<li><a href="#"><i class="icon-check"></i> Tuition Class Advertising</a></li>
+								<li><a href="#"><i class="icon-check"></i> Terms & Conditions</a></li>
+								<li><a href="#"><i class="icon-check"></i> Privacy Policy</a></li>
+								<li><a href="AboutUS.html"><i class="icon-check"></i> About Us</a></li>
+								<li><a href="contactUs.html"><i class="icon-check"></i> Contact Us</a></li>
+								<li><a href="careers.html"><i class="icon-check"></i> Careers</a></li>
+							</ul>
+						</p>
+					</div>
+
+
+
+					<div class="col-md-3 colorlib-widget">
+						<h4>Hot Buttons</h4>
+						<p>
+							
+							<ul class="colorlib-footer-links">
+								<li><button class="btn btn1"><a href="AboutUS.html"></i> About Us</a></button></li>
+								<li><button class="btn btn1"><a href="careers.html"></i> Careers</a></button></li>
+								<li><button class="btn btn1"><a href="contactUs.html"></i> Contact</a></button></li>
+
+							</ul>
+						</p>
+					</div>
+
+
+
+
+
+
+					<div class="col-md-3 colorlib-widget">
+
+					</div>
+
+					<div class="col-md-3 colorlib-widget">
+						<h4>Contact Info</h4>
+						<ul class="colorlib-footer-links">
+							<li>No. 386 B/2, Kandy Road,<br>Kurunegala, Sri Lanka</li>
+							<li><a href="tel://1234567920"><i class="icon-phone"></i> +94 374 550 530+94 777 77 4785</a></li>
+							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@mytutor.lk</a></li>
+							<li><a href="https://www.mytutor.lk/"><i class="icon-location4"></i> https://www.mytutor.lk/</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copy">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p>
+								<small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> 2011 - 2020 All Rights Reserved - mytutor.lk <i class="icon-heart" aria-hidden="true"></i> by <a href="https://www.mytutor.lk/" target="_blank">WEEKDAY GROUP 4</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</small><br> 
+								
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+
+	<script>
+const selectedAll = document.querySelectorAll(".selected");
+
+selectedAll.forEach((selected) => {
+  const optionsContainer = selected.previousElementSibling;
+  const searchBox = selected.nextElementSibling;
+
+  const optionsList = optionsContainer.querySelectorAll(".option");
+
+  selected.addEventListener("click", () => {
+    if (optionsContainer.classList.contains("active")) {
+      optionsContainer.classList.remove("active");
+    } else {
+      let currentActive = document.querySelector(".options-container.active");
+
+      if (currentActive) {
+        currentActive.classList.remove("active");
+      }
+
+      optionsContainer.classList.add("active");
+    }
+
+    searchBox.value = "";
+    filterList("");
+
+    if (optionsContainer.classList.contains("active")) {
+      searchBox.focus();
+    }
+  });
+
+  optionsList.forEach((o) => {
+    o.addEventListener("click", () => {
+      selected.innerHTML = o.querySelector("label").innerHTML;
+      optionsContainer.classList.remove("active");
+    });
+  });
+
+  searchBox.addEventListener("keyup", function (e) {
+    filterList(e.target.value);
+  });
+
+  const filterList = (searchTerm) => {
+    searchTerm = searchTerm.toLowerCase();
+    optionsList.forEach((option) => {
+      let label = option.firstElementChild.nextElementSibling.innerText.toLowerCase();
+      if (label.indexOf(searchTerm) != -1) {
+        option.style.display = "block";
+      } else {
+        option.style.display = "none";
+      }
+    });
+  };
+});
+
+
+
+
+
+
+
+
+
+		</script>
+
+
+	</body>
+</html>
+
